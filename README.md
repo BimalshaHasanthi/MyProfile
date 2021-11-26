@@ -1,3 +1,4 @@
-This is my profile
+#This is my profile.
 Institute of Java Software Engineering
+
 ![GitHub Logo](assets/images/img.png)
