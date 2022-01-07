@@ -9,7 +9,7 @@
     <meta name="description" content="This is bimalsha's portfolio">
     <meta name="viewport" content="width=device_width initial-scale=1">
     <meta name="theme-color" content="black">
-    <meta http-equiv="refresh" content="5">
+    <!--meta http-equiv="refresh" content="5"--->
 
 
     <style>
@@ -55,6 +55,7 @@
 
         #page1{
             height: 721px;
+            margin: 0;
         }
 
         #page1>p:nth-child(2){
@@ -106,19 +107,53 @@
 
         body>main>section>p{
             color: white;
-
         }
 
         #page2{
             height: 721px;
+            margin: 0;
         }
+
+        #title{
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+
+        }
+
+
+        #page2>section>div>p{
+            color: white;
+            font-size: 20px;
+            z-index: 5;
+        }
+
+
+
 
         body>footer{
             background: black;
             position: relative;
             height:100px;
-
         }
+
+        body>footer>ul{
+            list-style: none;
+            left: 550px;
+            position: absolute;
+        }
+
+        body>footer>ul>li{
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -139,7 +174,6 @@
         <img src="" height="">
         <p>Hi, I'm Bimalsha Hasanthi</p>
         <p>Full-Stack Developer</p>
-
         <ul>
             <li><img src="assets/icon/ic_fbB.png" height="50" width="50"></li>
             <li><img src="assets/icon/ic_insterB.png" height="50" width="50"></li>
@@ -147,17 +181,21 @@
             <li><img src="assets/icon/ic_mailB.png" height="50" width="50"></li>
             <li><img src="assets/icon/ic_githubB.png" height="50" width="50"></li>
         </ul>
-
     </section>
 
     <section id="page2">
-        <p>About Me</p>
-
-        <img src="" height="">
-
+        <p id="title">About Me</p>
         <p>I enjoy turning complex problems into simple and user friendly software solution and I have curious to learn new things.</p>
-        <p>I’m still studing about software development. As hobbies I love to watch movies & tv series.</p>
-
+        <section>
+            <div>
+                <p>Name : Bimalsha Hasanthi.</p>
+                <p>Age : 21</p>
+                <p>Address : Galle, Sri Lanka.</p>
+                <p>Email : bimalshahasanthi@gmil.com</p>
+                <p>Phone : +94770690506</p>
+                <p>Language : English</p>
+            </div>
+        </section>
     </section>
 
     <section></section>
@@ -186,11 +224,13 @@
 </main>
 
 <footer>
-    <img src="assets/icon/ic_fb.png" height="50" width="50">
-    <img src="assets/icon/ic_inster.png" height="50" width="50">
-    <img src="assets/icon/ic_linkedIn.png" height="50" width="50">
-    <img src="assets/icon/ic_mail.png" height="50" width="50">
-    <img src="assets/icon/ic_github.png" height="50" width="50">
+    <ul>
+        <li><img src="assets/icon/ic_fb.png" height="50" width="50"></li>
+        <li><img src="assets/icon/ic_inster.png" height="50" width="50"></li>
+        <li><img src="assets/icon/ic_linkedIn.png" height="50" width="50"></li>
+        <li><img src="assets/icon/ic_mail.png" height="50" width="50"></li>
+        <li><img src="assets/icon/ic_github.png" height="50" width="50"></li>
+    </ul>
 </footer>
 
 </body>
