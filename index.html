@@ -3,39 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <title>My Profile</title>
+    <link rel="icon" href="assets/images/mylogo.png">
+    <link rel="stylesheet" href="assets/style/normalize.css">
+    <meta name="keyword" content="portfolio,bimalsha">
+    <meta name="description" content="This is bimalsha's portfolio">
+    <meta name="viewport" content="width=device_width initial-scale=1">
+    <meta name="theme-color" content="black">
+    <meta http-equiv="refresh" content="5">
+
+
+    <style>
+        body>header{
+            background: black;
+            position: fixed;
+            height: 75px;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin: 0;
+        }
+        body>header>ul{
+            list-style: none;
+            top: 0;
+            right: 10px;
+            position: absolute;
+            margin: 30px;
+        }
+        body>header>ul>li{
+            display: inline-block;
+            color: white;
+            font-size: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        body>header>ul>li:hover{
+            cursor: pointer;
+            color: yellow;
+        }
+        body>header>img{
+            width: 200px;
+            position: relative;
+            padding-top: 0;
+            z-index: 5;
+        }
+
+        body>main>section{
+            background: #161616;
+            margin: 0;
+        }
+
+        #page1{
+            height: 721px;
+        }
+
+        #page1>p:nth-child(2){
+            font-size: 50px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 5;
+            padding-top: 400px;
+
+        }
+
+        #page1>p:nth-child(3){
+            font-size: 30px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px;
+            color: white;
+            z-index: 5;
+
+        }
+
+        #page1>img{
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            display: flex;
+        }
+
+        #page1>ul{
+            list-style: none;
+            top: 510px;
+            left: 527px;
+            position: absolute;
+            margin: 35px;
+        }
+
+        #page1>ul>li{
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        body>main>section>p{
+            color: white;
+
+        }
+
+        #page2{
+            height: 721px;
+        }
+
+        body>footer{
+            background: black;
+            position: relative;
+            height:100px;
+
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <nav>
-        <img src="assets/images/yellowlogo.png" height="40">
-        <h3>My Details</h3>
-        <h3>Skills</h3>
-        <h3>Projects</h3>
-        <h3>Contact</h3>
-    </nav>
+    <img src="assets/images/mylogo_header.png" height="75">
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Skills</li>
+        <li>Project</li>
+        <li>Contact</li>
+    </ul>
 </header>
 
 <main>
-
-    <section>
+    <section id="page1">
         <img src="" height="">
-        <h1>Hi, I'm Bimalsha Hasanthi</h1>
-        <h3>Full-Stack Developer</h3>
+        <p>Hi, I'm Bimalsha Hasanthi</p>
+        <p>Full-Stack Developer</p>
 
-        <img src="assets/icon/ic_fbB.png" height="50" width="50">
-        <img src="assets/icon/ic_insterB.png" height="50" width="50">
-        <img src="assets/icon/ic_linkedInB.png" height="50" width="50">
-        <img src="assets/icon/ic_mailB.png" height="50" width="50">
-        <img src="assets/icon/ic_githubB.png" height="50" width="50">
+        <ul>
+            <li><img src="assets/icon/ic_fbB.png" height="50" width="50"></li>
+            <li><img src="assets/icon/ic_insterB.png" height="50" width="50"></li>
+            <li><img src="assets/icon/ic_linkedInB.png" height="50" width="50"></li>
+            <li><img src="assets/icon/ic_mailB.png" height="50" width="50"></li>
+            <li><img src="assets/icon/ic_githubB.png" height="50" width="50"></li>
+        </ul>
+
     </section>
 
-    <section>
-        <h1>My Details</h1>
+    <section id="page2">
+        <p>About Me</p>
 
         <img src="" height="">
 
-        <p>Hi , I’m Bimalsha. I live in Galle, Sri Lanka. I enjoy turning complex problems into simple and user friendly software solution and I have curious to learn new things.</p>
+        <p>I enjoy turning complex problems into simple and user friendly software solution and I have curious to learn new things.</p>
         <p>I’m still studing about software development. As hobbies I love to watch movies & tv series.</p>
 
     </section>
@@ -51,16 +171,17 @@
         <img src="" height="">
     </section>
 
-    <section></section>
+    <section>
+
+    </section>
 
     <section></section>
 
     <section></section>
 
     <section>
-        <h1>Contacts</h1>
+        <h1>Contact</h1>
         <h3>Have a question or want to work togetter?</h3>
-
     </section>
 </main>
 
@@ -70,10 +191,12 @@
     <img src="assets/icon/ic_linkedIn.png" height="50" width="50">
     <img src="assets/icon/ic_mail.png" height="50" width="50">
     <img src="assets/icon/ic_github.png" height="50" width="50">
-
 </footer>
 
 </body>
 </html>
+
+
+
 
 
