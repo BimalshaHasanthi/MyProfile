@@ -47,18 +47,24 @@
             padding-top: 0;
             z-index: 5;
         }
-
         body>main>section{
             background: #161616;
             margin: 0;
         }
-
-        #page1{
-            height: 721px;
+        .title{
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0;
         }
 
-        #page1>p:nth-child(2){
+        #home{
+            height: 721px;
+            margin: 0;
+        }
+        #home>p:nth-child(2){
             font-size: 50px;
             margin: 0;
             display: flex;
@@ -69,8 +75,7 @@
             padding-top: 400px;
 
         }
-
-        #page1>p:nth-child(3){
+        #home>p:nth-child(3){
             font-size: 30px;
             margin: 0;
             display: flex;
@@ -79,75 +84,87 @@
             padding-top: 30px;
             color: white;
             z-index: 5;
-
         }
-
-        #page1>img{
+        #home>img{
             margin: 0;
             align-items: center;
             justify-content: center;
             z-index: 5;
             display: flex;
         }
-
-        #page1>ul{
+        #home>ul{
             list-style: none;
             top: 510px;
             left: 527px;
             position: absolute;
             margin: 35px;
         }
-
-        #page1>ul>li{
+        #home>ul>li{
             display: inline-block;
             font-size: 20px;
             margin-right: 10px;
             margin-top: 10px;
         }
-
         body>main>section>p{
             color: white;
         }
 
-        #page2{
+
+        #about{
             height: 721px;
             margin: 0;
         }
-
-        .title{
+        #about>p{
             color: white;
-            font-size: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-
+            font-size: 25px;
+            z-index: 5;
         }
-
-
-        #page2>section>div>p{
+        #about>section>div>p{
             color: white;
             font-size: 20px;
             z-index: 5;
         }
 
 
-        #page3{
+        #education{
             height: 721px;
             margin: 0;
         }
 
-        #page4{
+        #education>div{
+            background: #333333;
+            position: absolute;
+            left: 150px;
+            width: 1200px;
+            height: 130px;
+        }
+        #education>div:nth-child(2){
+            margin-top:50px;
+        }
+        #education>div:nth-child(3){
+            margin-top:250px;
+        }
+        #education>div>ul{
+            list-style: none;
+            position: absolute;
+            bottom: 38px;
+        }
+        #education>div>ul>li{
+            display: inline-block;
+            color: white;
+            font-size: 25px;
+            margin-right: 120px;
+        }
+
+        #skills{
             height: 721px;
             margin: 0;
         }
-
-        #page5{
+        #project{
             height: 1442px;
             margin: 0;
         }
-
-        #page6{
+        #contact{
             height: 540px;
             margin: 0;
         }
@@ -157,20 +174,17 @@
             position: relative;
             height:100px;
         }
-
         body>footer>ul{
             list-style: none;
             left: 550px;
             position: absolute;
         }
-
         body>footer>ul>li{
             display: inline-block;
             font-size: 20px;
             margin-right: 10px;
             margin-top: 5px;
         }
-
 
     </style>
 </head>
@@ -189,7 +203,7 @@
 </header>
 
 <main>
-    <section id="page1">
+    <section id="home">
         <img src="" height="">
         <p>Hi, I'm Bimalsha Hasanthi</p>
         <p>Full-Stack Developer</p>
@@ -202,7 +216,7 @@
         </ul>
     </section>
 
-    <section id="page2">
+    <section id="about">
         <h1 class="title">About Me</h1>
         <p>I enjoy turning complex problems into simple and user friendly software solution and I have curious to learn new things.</p>
         <section>
@@ -217,21 +231,35 @@
         </section>
     </section>
 
-    <section id="page3">
+    <section id="education">
         <h1 class="title">Education</h1>
+        <div>
+            <ul>
+                <li>Institute of Java Software Engineering</li>
+                <li>2020 - Present</li>
+                <li><img src="assets/images/ijse.jpg" height="100" width="200"></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Christ Church Girls' College</li>
+                <li>2006 - 2020</li>
+                <li><img src="assets/images/school.jpg" height="100" width="100"></li>
+            </ul>
+        </div>
     </section>
 
-    <section id="page4">
+    <section id="skills">
         <h1 class="title">Skills</h1>
     </section>
 
-    <section id="page5">
+    <section id="project">
         <h1 class="title">Projects</h1>
     </section>
 
-    <section id="page6">
+    <section id="contact">
         <h1 class="title">Contact</h1>
-        <h3>Have a question or want to work togetter?</h3>
+        <p>Have a question or want to work together?</p>
     </section>
 </main>
 
