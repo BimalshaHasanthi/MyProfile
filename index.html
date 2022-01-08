@@ -11,7 +11,6 @@
     <meta name="theme-color" content="black">
     <!--meta http-equiv="refresh" content="5"--->
 
-
     <style>
         body>header{
             background: black;
@@ -62,6 +61,7 @@
             justify-content: center;
             margin: 0;
         }
+
 
         #home{
             height: 721px;
@@ -135,7 +135,6 @@
             margin: 0;
             padding-top: 100px;
         }
-
         #education>div{
             background: #333333;
             position: absolute;
@@ -161,23 +160,52 @@
             margin-right: 120px;
         }
 
+
         #skills{
             height: 721px;
             margin: 0;
             padding-top: 100px;
         }
+
+
         #project{
             height: 1442px;
             margin: 0;
             padding-top: 100px;
-
         }
+
+
         #contact{
             height: 521px;
             margin: 0;
             padding-top: 100px;
-
         }
+        #contact>p{
+            color: silver;
+            font-size: 35px;
+            z-index: 5;
+            position: absolute;
+            left: 470px;
+        }
+        #contact>section{
+            position: absolute;
+            left: 500px;
+            padding-top: 100px;
+        }
+        #contact>section>div{
+            padding-top: 10px;
+        }
+        #contact>section>div>input{
+            width: 520px;
+            height: 30px;
+            background: silver;
+        }
+        #contact>section>div>textarea{
+            width: 520px;
+            height: 100px;
+            background: silver;
+        }
+
 
         body>footer{
             background: black;
@@ -270,6 +298,17 @@
     <section id="contact">
         <h1 class="title">Contact</h1>
         <p>Have a question or want to work together?</p>
+        <section>
+            <div>
+                <input placeholder="Name" type="text" name="name" required>
+            </div>
+            <div>
+                <input placeholder="Email" type="email" name="email" required>
+            </div>
+            <div>
+                <textarea placeholder="Your message" type="text" name="message"></textarea>
+            </div>
+        </section>
     </section>
 </main>
 
