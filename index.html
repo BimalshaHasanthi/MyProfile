@@ -23,6 +23,10 @@
             z-index: 1;
             margin: 0;
         }
+        body>header a{
+            color: white;
+            text-decoration: none;
+        }
         body>header>ul{
             list-style: none;
             top: 0;
@@ -32,12 +36,11 @@
         }
         body>header>ul>li{
             display: inline-block;
-            color: white;
             font-size: 20px;
             margin-right: 20px;
             margin-top: 10px;
         }
-        body>header>ul>li:hover{
+        body>header>ul>li>a:hover{
             cursor: pointer;
             color: yellow;
         }
@@ -113,6 +116,7 @@
         #about{
             height: 721px;
             margin: 0;
+            padding-top: 100px;
         }
         #about>p{
             color: white;
@@ -129,6 +133,7 @@
         #education{
             height: 721px;
             margin: 0;
+            padding-top: 100px;
         }
 
         #education>div{
@@ -159,14 +164,19 @@
         #skills{
             height: 721px;
             margin: 0;
+            padding-top: 100px;
         }
         #project{
             height: 1442px;
             margin: 0;
+            padding-top: 100px;
+
         }
         #contact{
-            height: 540px;
+            height: 521px;
             margin: 0;
+            padding-top: 100px;
+
         }
 
         body>footer{
@@ -193,12 +203,12 @@
 <header>
     <img src="assets/images/mylogo_header.png" height="75">
     <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Education</li>
-        <li>Skills</li>
-        <li>Project</li>
-        <li>Contact</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 </header>
 
