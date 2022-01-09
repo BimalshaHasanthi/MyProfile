@@ -228,7 +228,20 @@
             height: 100px;
             background: silver;
         }
+        .button{
+            background-color: #161616;
+            color: white;
+            border: 3px solid yellow;
+            width: 150px;
+            height: 40px;
+            border-radius: calc(55px/2);
+            transition-duration: 0.4s;
+        }
 
+        .button:hover {
+            background-color: yellow;
+            color: black;
+        }
 
         body>footer{
             background: black;
@@ -398,6 +411,8 @@
             <div>
                 <textarea placeholder="Your message" type="text" name="message"></textarea>
             </div>
+            <br>
+            <button type="button" class="button">Send Message</button>
         </section>
     </section>
 </main>
