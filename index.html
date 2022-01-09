@@ -56,16 +56,25 @@
         .title{
             color: white;
             font-size: 50px;
+            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0;
         }
 
 
         #home{
             height: 721px;
             margin: 0;
+        }
+        #home>img{
+            margin: 0;
+            position: absolute;
+            top: 150px;
+            left: 625px;
+            border-radius: 100%;
+            width: 275px;
+            height: 275px;
         }
         #home>p:nth-child(2){
             font-size: 50px;
@@ -75,8 +84,7 @@
             justify-content: center;
             color: white;
             z-index: 5;
-            padding-top: 400px;
-
+            padding-top: 450px;
         }
         #home>p:nth-child(3){
             font-size: 30px;
@@ -84,11 +92,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-top: 30px;
+            padding-top: 25px;
             color: white;
             z-index: 5;
         }
-        #home>img{
+        #home>ul>li img{
             margin: 0;
             align-items: center;
             justify-content: center;
@@ -97,7 +105,7 @@
         }
         #home>ul{
             list-style: none;
-            top: 510px;
+            top: 540px;
             left: 527px;
             position: absolute;
             margin: 35px;
@@ -165,6 +173,21 @@
             height: 721px;
             margin: 0;
             padding-top: 100px;
+        }
+
+        #java{
+        }
+        #mysql{
+        }
+        #html{
+        }
+        #css{
+        }
+        #figma{
+        }
+        #python{
+        }
+        #hibernate{
         }
 
 
@@ -242,7 +265,7 @@
 
 <main>
     <section id="home">
-        <img src="" height="">
+        <img src="assets/images/myimage.jpg" height="">
         <p>Hi, I'm Bimalsha Hasanthi</p>
         <p>Full-Stack Developer</p>
         <ul>
@@ -289,6 +312,73 @@
 
     <section id="skills">
         <h1 class="title">Skills</h1>
+        <section>
+            <ul>
+                <li>
+                    <section id="java">
+                        <p>JAVA</p>
+                        <section>
+                            <div></div>
+                            <p>75%</p>
+                        </section>
+                    </section>
+                </li>
+                <li>
+                    <section id="mysql">
+                        <p>MYSQL</p>
+                        <section>
+                            <div></div>
+                            <p>80%</p>
+                        </section>
+                    </section>
+                </li>
+                <li>
+                    <section id="html">
+                        <p>HTML</p>
+                        <section>
+                            <div></div>
+                            <p>70%</p>
+                        </section>
+                    </section>
+                </li>
+                <li>
+                    <section id="css">
+                        <p>CSS</p>
+                        <section>
+                            <div></div>
+                            <p>40%</p>
+                        </section>
+                    </section>
+                </li>
+                <li>
+                    <section id="figma">
+                        <p>FIGMA</p>
+                        <section>
+                            <div></div>
+                            <p>90%</p>
+                        </section>
+                    </section>
+                </li>
+                <li>
+                    <section id="python">
+                        <p>PYTHON</p>
+                        <section>
+                            <div></div>
+                            <p>30%</p>
+                        </section>
+                    </section>
+                </li>
+                <li>
+                    <section id="hibernate">
+                        <p>HIBERNATE</p>
+                        <section>
+                            <div></div>
+                            <p>75%</p>
+                        </section>
+                    </section>
+                </li>
+            </ul>
+        </section>
     </section>
 
     <section id="project">
