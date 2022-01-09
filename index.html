@@ -44,7 +44,7 @@
             color: yellow;
         }
         body>header>img{
-            width: 200px;
+            width: 150px;
             position: relative;
             padding-top: 0;
             z-index: 5;
@@ -126,15 +126,33 @@
             margin: 0;
             padding-top: 100px;
         }
-        #about>p{
+        #about>section>p{
             color: white;
-            font-size: 25px;
+            font-size: 30px;
             z-index: 5;
         }
         #about>section>div>p{
             color: white;
-            font-size: 20px;
+            font-size: 25px;
             z-index: 5;
+        }
+        #about>section:nth-child(2){
+            position: absolute;
+            margin-top: 50px;
+            left: 150px;
+            width: 700px;
+            height: 130px;
+        }
+        #about>section:nth-child(3){
+            position: absolute;
+            margin-top: 100px;
+            left: 1000px;
+            width: 400px;
+            height: 500px;
+        }
+        #about>section>button{
+            width: 180px;
+            height: 40px;
         }
 
 
@@ -228,12 +246,14 @@
             height: 100px;
             background: silver;
         }
+        #contact>section>button{
+            width: 150px;
+            height: 40px;
+        }
         .button{
             background-color: #161616;
             color: white;
             border: 3px solid yellow;
-            width: 150px;
-            height: 40px;
             border-radius: calc(55px/2);
             transition-duration: 0.4s;
         }
@@ -292,7 +312,11 @@
 
     <section id="about">
         <h1 class="title">About Me</h1>
-        <p>I enjoy turning complex problems into simple and user friendly software solution and I have curious to learn new things.</p>
+        <section>
+            <p>"I enjoy turning complex problems into simple and user friendly software solution and I have curious to learn new things."</p>
+            <br>
+            <button type="button" class="button">Download my CV</button>
+        </section>
         <section>
             <div>
                 <p>Name : Bimalsha Hasanthi.</p>
@@ -303,6 +327,7 @@
                 <p>Language : English</p>
             </div>
         </section>
+
     </section>
 
     <section id="education">
