@@ -9,6 +9,8 @@
     <meta name="description" content="This is bimalsha's portfolio">
     <meta name="viewport" content="width=device_width initial-scale=1">
     <meta name="theme-color" content="black">
+    <link rel="stylesheet" href="assets/style/fontawesome-free-6.0.0-beta3-web/css/all.css">
+
     <!--meta http-equiv="refresh" content="5"--->
 
     <style>
@@ -226,10 +228,82 @@
 
 
         #project{
-            height: 1442px;
+            height: 1200px;
             margin: 0;
             padding-top: 100px;
         }
+        #project section>p{
+            z-index: 5;
+            color: white;
+            font-size: 40px;
+            padding-left: 100px;
+        }
+        #project section>ul>li>a{
+            position: absolute;
+            color: white;
+            z-index: 5;
+            font-size: 50px;
+        }
+        #project section>ul>li>a:hover{
+            color: yellow;
+        }
+        #project section>ul{
+            list-style: none;
+            position: absolute;
+        }
+        #project section>ul>li{
+            display: inline-block;
+        }
+
+        #projectAlign{
+            margin-top: 50px;
+        }
+
+        #project_left{
+            padding-left: 50px;
+        }
+        #project_right{
+            padding-right: 50px;
+        }
+        #project1{
+            padding-left: 200px;
+        }
+        #project2{
+            padding-left: 25px;
+        }
+        #project3{
+            padding-left: 25px;
+            padding-right: 100px;
+        }
+
+        #assignmentAlign{
+            margin-top: 400px;
+        }
+
+        #assignment_left{
+            padding-left: 100px;
+        }
+        #assignment_right{
+            padding-right: 50px;
+        }
+        #assignment1{
+            padding-left: 150px;
+        }
+        #assignment2{
+            padding-left: 25px;
+        }
+        #assignment3{
+            padding-left: 25px;
+            padding-right: 100px;
+        }
+
+
+
+
+
+
+
+
 
 
 
@@ -293,7 +367,6 @@
         body>footer>ul>li{
             display: inline-block;
             font-size: 20px;
-            margin-right: 10px;
             margin-top: 5px;
         }
 
@@ -438,6 +511,31 @@
 
     <section id="project">
         <h1 class="title">Projects</h1>
+
+        <section>
+            <p  id="projectAlign">Projects</p>
+            <ul>
+                <li><a href=""><i class="fa-solid fa-circle-chevron-left" id="project_left"></i></a></li>
+                <li id="project1"><img src="assets/images/assignment1.png" height="200" width="300"></li>
+                <li id="project2"><img src="assets/images/assignment2.png" height="250" width="400"></li>
+                <li id="project3"><img src="assets/images/assignment3.png" height="250" width="250"></li>
+                <li><a href=""><i class="fa-solid fa-circle-chevron-right" id="project_right"></i></a></li>
+            </ul>
+        </section>
+        <br><br>
+
+        <section>
+            <p  id="assignmentAlign">CSS Assignments</p>
+            <ul>
+                <li><a href=""><i class="fa-solid fa-circle-chevron-left" id="assignment_left"></i></a></li>
+                <li id="assignment1"><img src="assets/images/project1.jpg" height="250" width="250"></li>
+                <li id="assignment2"><img src="assets/images/project2.jpg" height="250" width="400"></li>
+                <li id="assignment3"><img src="assets/images/project3.jpg" height="225" width="350"></li>
+                <li><a href=""><i class="fa-solid fa-circle-chevron-right" id="assignment_right"></i></a></li>
+            </ul>
+        </section>
+
+
     </section>
 
     <section id="contact">
