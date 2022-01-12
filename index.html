@@ -206,24 +206,64 @@
 
         #skills{
             height: 721px;
-            margin: 0;
             padding-top: 100px;
         }
-
+        #skills section>ul{
+            list-style: none;
+            position: absolute;
+        }
+        #skills section>ul>li{
+            display: inline-block;
+        }
+        #skills section>ul>li>section{
+            display: inline-block;
+        }
+        #skills section>ul>li>section>section{
+            margin-left: 50px;
+            display: inline-block;
+            width: 800px;
+            height: 30px;
+            background-color: silver;
+        }
+        #skills section>ul>li>section>section>div{
+            height: 30px;
+            background-color: yellow;
+        }
 
         #java{
+            width: 600px;
         }
         #mysql{
+            width: 640px;
         }
         #html{
+            width: 560px;
         }
         #css{
+            width: 332px;
         }
         #figma{
+            width: 720px;
         }
         #python{
+            width: 240px;
         }
         #hibernate{
+            width: 600px;
+        }
+        .percentage{
+            margin-left: 10px;
+            display: inline-block;
+            color: white;
+            font-size: 25px;
+            z-index: 5;
+        }
+        .skillName{
+            margin-left: 200px;
+            display: inline-block;
+            color: white;
+            font-size: 25px;
+            z-index: 5;
         }
 
 
@@ -304,8 +344,6 @@
             z-index: 6;
             font-size: 20px;
         }
-
-
 
 
         #contact{
@@ -445,66 +483,66 @@
         <section>
             <ul>
                 <li>
-                    <section id="java">
-                        <p>JAVA</p>
+                    <section>
+                        <p class="skillName">JAVA</p>
                         <section>
-                            <div></div>
-                            <p>75%</p>
+                            <div  id="java"></div>
                         </section>
+                        <p class="percentage">75%</p>
                     </section>
                 </li>
                 <li>
-                    <section id="mysql">
-                        <p>MYSQL</p>
+                    <section>
+                        <p class="skillName">MYSQL</p>
                         <section>
-                            <div></div>
-                            <p>80%</p>
+                            <div  id="mysql"></div>
                         </section>
+                        <p class="percentage">80%</p>
                     </section>
                 </li>
                 <li>
-                    <section id="html">
-                        <p>HTML</p>
+                    <section>
+                        <p class="skillName">HTML</p>
                         <section>
-                            <div></div>
-                            <p>70%</p>
+                            <div  id="html"></div>
                         </section>
+                        <p class="percentage">70%</p>
                     </section>
                 </li>
                 <li>
-                    <section id="css">
-                        <p>CSS</p>
+                    <section>
+                        <p class="skillName">CSS</p>
                         <section>
-                            <div></div>
-                            <p>40%</p>
+                            <div  id="css"></div>
                         </section>
+                        <p class="percentage">40%</p>
                     </section>
                 </li>
                 <li>
-                    <section id="figma">
-                        <p>FIGMA</p>
+                    <section>
+                        <p class="skillName">FIGMA</p>
                         <section>
-                            <div></div>
-                            <p>90%</p>
+                            <div id="figma"></div>
                         </section>
+                        <p class="percentage">90%</p>
                     </section>
                 </li>
                 <li>
-                    <section id="python">
-                        <p>PYTHON</p>
+                    <section>
+                        <p class="skillName">PYTHON</p>
                         <section>
-                            <div></div>
-                            <p>30%</p>
+                            <div  id="python"></div>
                         </section>
+                        <p class="percentage">30%</p>
                     </section>
                 </li>
                 <li>
-                    <section id="hibernate">
-                        <p>HIBERNATE</p>
+                    <section>
+                        <p class="skillName">HIBERNATE</p>
                         <section>
-                            <div></div>
-                            <p>75%</p>
+                            <div id="hibernate"></div>
                         </section>
+                        <p class="percentage">75%</p>
                     </section>
                 </li>
             </ul>
