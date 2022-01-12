@@ -219,7 +219,7 @@
             display: inline-block;
         }
         #skills section>ul>li>section>section{
-            margin-left: 50px;
+            margin-left: 30px;
             display: inline-block;
             width: 800px;
             height: 30px;
@@ -268,82 +268,67 @@
 
 
         #project{
-            height: 1200px;
+            height: 721px;
             margin: 0;
             padding-top: 100px;
+            position: relative;
         }
-        #project section>p{
-            z-index: 5;
-            color: white;
-            font-size: 40px;
-            padding-left: 100px;
-        }
-        #project section>ul>li>a{
+        .projectWidows{
             position: absolute;
-            color: white;
-            z-index: 5;
-            font-size: 50px;
-        }
-        #project section>ul>li>a:hover{
-            color: yellow;
-        }
-        #project section>ul{
-            list-style: none;
-            position: absolute;
-        }
-        #project section>ul>li{
-            display: inline-block;
-        }
-
-        #projectAlign{
             margin-top: 50px;
+            width: 30%;
+            height: 50%;
         }
-
-
-        #project_left{
-            padding-left: 50px;
+        .projectWidows>img{
+            width: 100%;
+            height: 100%;
+            filter: brightness(50%);
         }
-        #project_right{
-            padding-right: 50px;
-        }
-        #project1{
-            padding-left: 200px;
-        }
-        #project2{
-            padding-left: 25px;
-        }
-        #project3{
-            padding-left: 25px;
-            padding-right: 100px;
-        }
-
-
-        #assignmentAlign{
-            margin-top: 450px;
-        }
-
-        #assignment_left{
-            padding-left: 50px;
-        }
-        #assignment_right{
-            padding-right: 50px;
-        }
-        #assignment1{
-            padding-left: 200px;
-        }
-        #assignment2{
-            padding-left: 25px;
-        }
-        #assignment3{
-            padding-left: 25px;
-            padding-right: 100px;
-        }
-
-        #project ul li>p{
+        .projectWidows>p{
+            position: absolute;
+            font-size: 40px;
             color: white;
-            z-index: 6;
-            font-size: 20px;
+            background-color: #161616;
+            margin: auto;
+            padding-left: 10px;
+            padding-right: 10px;
         }
+        #assignmentAlign{
+            left: 25%;
+            top: 10%;
+        }
+        #projectAlign{
+            left: 35%;
+            top: 10%;
+        }
+        #projectMore{
+            left: 15%;
+        }
+        #assignmentMore{
+            left: 55%;
+        }
+        .projectWidows:hover{
+            border: 5px solid yellow;
+        }
+        .projectWidows>button{
+            width: 35%;
+            height: 10%;
+        }
+        .buttonProject{
+            position: absolute;
+            background-color: #161616;
+            color: white;
+            border: 3px solid yellow;
+            border-radius: calc(55px/2);
+            transition-duration: 0.4s;
+            left: 35%;
+            top: 55%;
+        }
+        .buttonProject:hover {
+            background-color: yellow;
+            color: black;
+        }
+
 
 
         #contact{
@@ -551,30 +536,18 @@
 
     <section id="project">
         <h1 class="title">Projects</h1>
+        <div class="projectWidows" id="projectMore">
+            <img src="assets/images/project1.jpg">
+            <p id="projectAlign">Projects</p>
+            <<button type="button" class="buttonProject">See Projects</button>
 
-        <section>
-            <p  id="projectAlign">Projects</p>
-            <ul>
-                <li><a href=""><i class="fa-solid fa-circle-chevron-left" id="project_left"></i></a></li>
-                <li id="project1"><img src="assets/images/project1.jpg" height="250" width="250"><p>Student Management System</p></li>
-                <li id="project2"><img src="assets/images/project2.jpg" height="250" width="350"><p>Room Reservation System</p></li>
-                <li id="project3"><img src="assets/images/project3.jpg" height="225" width="350"><p>Parking System</p></li>
-                <li><a href=""><i class="fa-solid fa-circle-chevron-right" id="project_right"></i></a></li>
-            </ul>
+        </div>
+        <div class="projectWidows" id="assignmentMore">
+            <img src="assets/images/assignment1.png">
+            <p id="assignmentAlign">Assignments</p>
+            <button type="button" class="buttonProject">See Assignments</button>
 
-        </section>
-        <br><br>
-
-        <section>
-            <p  id="assignmentAlign">CSS Assignments</p>
-            <ul>
-                <li><a href=""><i class="fa-solid fa-circle-chevron-left" id="assignment_left"></i></a></li>
-                <li id="assignment1"><img src="assets/images/assignment1.png" height="200" width="300"><p>Assignment 01</p></li>
-                <li id="assignment2"><img src="assets/images/assignment2.png" height="250" width="400"><p>Assignment 02</p></li>
-                <li id="assignment3"><img src="assets/images/assignment3.png" height="250" width="250"><p>Assignment 03</p></li>
-                <li><a href=""><i class="fa-solid fa-circle-chevron-right" id="assignment_right"></i></a></li>
-            </ul>
-        </section>
+        </div>
 
 
     </section>
