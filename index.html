@@ -58,8 +58,6 @@
             background: #161616;
             margin: 0;
         }
-
-
         .title{
             color: white;
             font-size: 50px;
@@ -68,6 +66,28 @@
             align-items: center;
             justify-content: center;
             font-family: "Montserrat Medium";
+        }
+        .changeColour{
+            animation-name: colorChange;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes colorChange {
+            0%   {
+                color:white;
+            }
+            25%  {
+                color:yellow;
+            }
+            50%  {
+                color:white;
+            }
+            75%  {
+                color:yellow;
+            }
+            100% {
+                color:white;
+            }
         }
 
 
@@ -95,6 +115,7 @@
             padding-top: 450px;
             font-family: "Montserrat Medium";
         }
+
         #home>p:nth-child(3){
             font-size: 30px;
             margin: 0;
@@ -449,7 +470,7 @@
 <main>
     <section id="home">
         <img src="assets/images/myimage.jpg" height="">
-        <p>Hi, I'm Bimalsha Hasanthi</p>
+        <p class="changeColour">Hi, I'm Bimalsha Hasanthi</p>
         <p>Full-Stack Developer</p>
         <ul>
             <li><a href="" target="_blank"><img src="assets/icon/ic_fbB.png" height="50" width="50"></a></li>
