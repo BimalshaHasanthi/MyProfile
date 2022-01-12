@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 09</title>
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+    <style>
+        body{
+            background-color: #161616;
+        }
+        main{
+            border: 5px solid white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 1200px;
+            height: 600px;
+            overflow: hidden;
+        }
+        section{
+            width: 400%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            top: 0;
+            left: 0;
+            animation-name: image;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-direction: alternate;
+        }
+        div{
+            width: 25%;
+            background-size: cover;
+            position: center;
+        }
+        div:nth-child(1){
+            background-image: url("assets/image/1.jpg");
+        }
+        div:nth-child(2){
+            background-image: url("assets/image/2.jpg");
+        }
+        div:nth-child(3){
+            background-image: url("assets/image/3.jpg");
+        }
+        div:nth-child(4){
+            background-image: url("assets/image/4.jpg");
+        }
+        @keyframes image{
+            0%,10%{
+                left: 0;
+            }
+            30%,40%{
+                left: -100%;
+            }
+            60%,70%{
+                left: -200%;
+            }
+            90%,100%{
+                left: -300%;
+            }
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+</body>
+</html>

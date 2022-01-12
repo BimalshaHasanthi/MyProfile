@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 01</title>
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+
+    <style>
+       body>section{
+           height: 50vh;
+           width: 50vw;
+           position: absolute;
+       }
+       body>section:nth-child(1){
+            background: red;
+            left: 0;
+            top : 0;
+        }
+       body>section:nth-child(2){
+            background: green;
+            right: 0;
+            top : 0;
+        }
+       body>section:nth-child(3){
+            background: yellow;
+            left: 0;
+            bottom: 0;
+        }
+       body>section:nth-child(4){
+            background: hotpink;
+            right: 0;
+            bottom: 0;
+        }
+
+       body>section:nth-child(5){
+           background: white;
+           right: 0;
+           bottom: 0;
+           top: 0;
+           left: 0;
+           position: absolute;
+           margin: auto;
+           width: 15vw;
+           height: 15vw;
+       }
+
+       .center{
+           height: 10vw;
+           width: 10vw;
+           border-radius: 100%;
+           background: red;
+           z-index: 60;
+           position: absolute;
+           right: 0;
+           bottom: 0;
+           top: 0;
+           left: 0;
+           margin: auto;
+
+       }
+
+        body>section>div{
+            background: white;
+            width: 15vw;
+            height: 15vw;
+            z-index: 100;
+            position: absolute;
+        }
+       body >section>div:nth-child(1) {
+           left: 0;
+           top: 0;
+           border-bottom-right-radius: 100%;
+       }
+      body >section>div:nth-child(2) {
+           right: 0;
+           top: 0;
+           border-bottom-left-radius: 100%;
+       }
+       body > section>div:nth-child(3) {
+           left: 0;
+           top: 0;
+           border-bottom-right-radius: 100%;
+       }
+       body > section>div:nth-child(4) {
+           right: 0;
+           top: 0;
+           border-bottom-left-radius: 100%;
+       }
+
+        .square{
+            height: 5vw;
+            width: 5vw;
+            background: red;
+            z-index: 30;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        .circle{
+            height: 15vw;
+            width: 15vw;
+            border-radius: 100%;
+            background: white;
+            z-index: 20;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        .corner{
+            width: 10vw;
+            height: 10vw;
+            background: white;
+            position: absolute;
+        }
+
+        body section:nth-child(1)>.corner{
+            top: 0;
+            left: 0;
+            border-bottom-right-radius: 100%;
+        }
+       body section:nth-child(2)>.corner{
+           top: 0;
+           right: 0;
+           border-bottom-left-radius: 100%;
+       }
+       body section:nth-child(3)>.corner{
+           bottom: 0;
+           left: 0;
+           border-top-right-radius: 100%;
+       }
+       body section:nth-child(4)>.corner{
+           bottom: 0;
+           right: 0;
+           border-top-left-radius: 100%;
+       }
+        .middle{
+            background: white;
+            height: 8vw;
+            width: 16vw;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+        }
+
+        #up{
+            top: 0;
+            border-bottom-right-radius: 20vw;
+            border-bottom-left-radius:  20vw;
+        }
+       #down{
+           bottom: 0;
+           border-top-right-radius:  20vw;
+           border-top-left-radius:  20vw;
+       }
+
+
+    </style>
+</head>
+<body>
+<section>
+    <section class="corner"></section>
+    <section class="circle">
+        <section class="square"></section>
+    </section>
+</section>
+<section>
+    <section class="corner"></section>
+    <section class="circle">
+        <section class="square"></section>
+    </section>
+</section>
+<section>
+    <section class="corner"></section>
+    <section class="circle">
+        <section class="square"></section>
+    </section>
+</section>
+<section>
+    <section class="corner"></section>
+    <section class="circle">
+        <section class="square"></section>
+    </section>
+</section>
+
+<section>
+    <div class="center"></div>
+</section>
+<div class="middle" id="up">
+
+</div>
+<div class="middle" id="down">
+
+</div>
+
+</body>
+</html>

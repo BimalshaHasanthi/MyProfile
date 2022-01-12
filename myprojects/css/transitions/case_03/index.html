@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 10</title>
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+    <style>
+        body>main>section{
+            border-radius: 100%;
+            border: 3px solid blue;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            margin: auto;
+
+            animation-name: drop;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+
+        }
+        @keyframes drop{
+            0%{
+                width: 50px;
+                height: 50px;
+                border: 3px solid blue;
+            }
+            100%{
+                width: 300px;
+                height: 300px;
+                border: 10px solid white;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+
+    </section>
+</main>
+
+</body>
+</html>

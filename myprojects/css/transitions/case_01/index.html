@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 08</title>
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+    <style>
+        body>section{
+            width: 200px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            border-radius: 30px;
+            animation-name: test;
+
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        @keyframes test {
+            0% {
+                left: 0;
+                top: 60px;
+                background-color: yellow;
+                transform: rotate(0deg);
+            }
+            25% {
+                top: 60px;
+                left: 1300px;
+                background-color: green;
+                transform: rotate(90deg);
+            }
+            50% {
+                top: 500px;
+                left: 1300px;
+                background-color: red;
+                transform: rotate(180deg);
+
+            }
+            75% {
+                top: 500px;
+                left: 0;
+                background-color: sienna;
+                transform: rotate(270deg);
+
+            }
+            100% {
+                top: 60px;
+                left: 0;
+                background-color: pink;
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+<section>
+
+</section>
+</body>
+</html>

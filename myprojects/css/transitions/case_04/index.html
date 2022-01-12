@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 11</title>
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+    <style>
+        main{
+            position: relative;
+            background-image: url("assets/images/sky.jpg");
+            background-size: cover;
+            overflow: hidden;
+            width: 1536px;
+            height: 721px;
+        }
+        .background{
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            left: 0;
+            width: 350%;
+            height: 75%;
+            flex-direction: column;
+            animation-name: road;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        main>section:nth-child(1)>div{
+            position: relative;
+        }
+        main>section:nth-child(1)>div:nth-child(1){
+            flex-grow: 1;
+            background-image: url("assets/images/city.png");
+            background-size: contain;
+        }
+        main>section:nth-child(1)>div:nth-child(2){
+            flex-grow: 1;
+            background-image: url("assets/images/road.jpg");
+            background-size: cover;
+        }
+        .car{
+            position: absolute;
+            width: 390px;
+            height: 195px;
+            top: 400px;
+            left: 500px;
+        }
+        main>section:nth-child(2)>section{
+            background-image: url("assets/images/car.png");
+            background-size: cover;
+            width: 100%;
+            height: 70%;
+        }
+        main>section:nth-child(2)>div{
+            position: absolute;
+            background-image: url("assets/images/wheel.png");
+            background-size: cover;
+            width: 73px;
+            height: 73px;
+            bottom: 37px;
+            left: 33px;
+            animation-name: wheel;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        main>section:nth-child(2)>div:nth-child(3){
+            left: 33px;
+        }
+        main>section:nth-child(2)>div:nth-child(2){
+            left: 272px;
+        }
+        @keyframes road{
+            0%{
+                transform: translateX(0%);
+            }
+            100%{
+                transform: translateX(-60%);
+            }
+        }
+        @keyframes wheel{
+            0%,1%{
+                transform: rotateZ(0deg);
+            }
+            40%{
+                transform: rotateZ(-360deg);
+            }
+            100%{
+                transform: rotateZ(-90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section class="background">
+        <div></div>
+        <div></div>
+    </section>
+    <section class="car">
+        <section></section>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+</body>
+</html>

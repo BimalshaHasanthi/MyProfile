@@ -1,4 +1,4 @@
-#Hi, I'm Bimalsha.
+#Hi, I'm Bimalsha.<br>
 ###This is my portfolio.
 ![GitHub Logo](assets/images/1.png)
 ![GitHub Logo](assets/images/2.png)

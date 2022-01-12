@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 03</title>
+    <link href="assets/css/normalize.css" rel="stylesheet">
+
+    <style>
+        .background{
+            background: white;
+            position: relative;
+            /*display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+             */
+            height: 98vh;
+            width: 98vw;
+            margin: auto;
+
+
+        }
+        .outer{
+            border: 20px solid gray;
+            height: 250px;
+            width: 250px;
+            border-radius: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            margin: auto;
+            z-index: 10;
+
+        }
+        .inner{
+            border: 20px solid red;
+            height: 210px;
+            width: 210px;
+            border-radius: 100%;
+            /*align-items: center;*/
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            margin: auto;
+
+
+        }
+        .center{
+            height: 225px;
+            width: 225px;
+            border-radius: 100%;
+            /*align-items: center;*/
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            margin: auto;
+
+        }
+        #window1{
+            background: gold;
+        }
+        #window2{
+            background: deepskyblue;
+        }
+        #window3{
+            background: indianred;
+        }
+        body>section>section>p{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: white;
+            display: inline;
+            margin: auto;
+            font-size: 27px;
+
+        }
+        #window1>p{
+            height: 30px;
+            width: 65px;
+        }
+        #window2>p{
+            height: 45px;
+            width: 90px;
+        }
+        #window3>p{
+            height: 130px;
+            width: 110px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<section class="outer">
+    <section class="inner">
+    </section>
+</section>
+<section class="background">
+    <section class="center" id="window1">
+        <p>Hello</p>
+    </section>
+</section>
+<section class="background">
+    <section class="center" id="window2">
+        <p>Welcome To</p>
+    </section>
+</section>
+<section class="background">
+    <section class="center" id="window3">
+        <p>Institute of Java Software Engineering</p>
+    </section>
+</section>
+</body>
+</html>
