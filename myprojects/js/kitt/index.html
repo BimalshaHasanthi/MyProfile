@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitt</title>
+
+    <style>
+        body{
+            background: #5c636a;
+        }
+        body>header>p{
+            font-size: 50px;
+            position: absolute;
+            left: 35%;
+            top: 10%;
+            color: white;
+        }
+        body>main{
+            /*border: 2px solid red;*/
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            width: 50%;
+            height: 300px;
+            top: 260px;
+            left: 25%;
+        }
+        body>main>section{
+            /*border: 2px solid blue;*/
+            position: relative;
+            display: inline-flex;
+            height: 33%;
+        }
+        body>main>section>div{
+            /*border: 2px solid yellow;*/
+            position: relative;
+            display: inline-flex;
+            height: 100%;
+        }
+
+        .box{
+            height: calc(100% - 50px);
+            width: calc(100% - 20px);
+            z-index: 10;
+            border-radius: 5%;
+            background: red;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 25px;
+        }
+        .row{
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+        }
+
+        #section1{
+            flex-grow: 1;
+        }
+        #section2{
+            position: relative;
+            display: inline-flex;
+            flex-grow: 8;
+        }
+        #section3{
+            flex-grow: 1;
+        }
+        .oneSideSpace{
+            flex-grow: 6;
+        }
+        .doubleSideSpace{
+            flex-grow: 3;
+        }
+
+        .btnControl{
+            position: absolute;
+            top: 60%;
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+        }
+
+
+
+        #btnStart{
+            background: white;
+            left: 40%;
+        }
+        #btnStop{
+            background: white;
+            left: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <p>Java Script Knight Rider</p>
+</header>
+<main>
+    <section class="row">
+        <div id="section1">
+            <section class="box" id="box1"></section>
+            <section class="box" id="box2"></section>
+            <section class="box" id="box3"></section>
+            <section class="box" id="box4"></section>
+            <section class="box" id="box5"></section>
+            <section class="box" id="box6"></section>
+            <section class="box" id="box7"></section>
+        </div>
+    </section>
+</main>
+<section>
+    <button id="btnStart" class="btnControl">START</button>
+    <button id="btnStop" class="btnControl">STOP</button>
+</section>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+
+
+</script>
+</body>
+</html>

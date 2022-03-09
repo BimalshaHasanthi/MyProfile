@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Order</title>
+    <link rel="stylesheet" href="assets/style/normalize.css">
+    <meta name="keyword" content="bootstrap,css framework">
+    <meta name="description" content="bootstrap">
+    <meta name="viewport" content="width=device_width initial-scale=1">
+    <meta name="theme-color" content="white">
+    <link rel="stylesheet" href="assets/style/fontawesome-free-6.0.0-beta3-web/css/all.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        header>nav>section>p{
+            font-size: 30px;
+            margin: 10px;
+            margin-left: 20px;
+            font-family: "Montserrat ExtraBold";
+        }
+        #navBar{
+            background: #31B97B !important;
+            height: 80px;
+            /*box-shadow: 3px 3px 10px #2c3034;*/
+        }
+        #sidebar{
+            background: #31B97B !important;
+            min-width: 100px;
+            width: 275px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 80px;
+            /*box-shadow: 3px 3px 10px #2c3034;*/
+            transition: all 0.4s;
+        }
+        main>nav>ul>li{
+            font-size: 23px;
+            margin-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .nav-link{
+            text-transform: capitalize;
+        }
+        .nav-link:hover{
+            background: white;
+        }
+
+        /*------------------------------------------------------------------------*/
+
+        .mainContent{
+            position: absolute;
+            left: 300px;
+            top: 100px;
+            right: 50px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav id="navBar" class="navbar navbar-expand navbar-light fixed-top" >
+        <!--        <div class="container-fluid">-->
+        <!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">-->
+        <!--                <span class="navbar-toggler-icon"></span>-->
+        <!--            </button>-->
+        <!--        </div>-->
+        <section class="container-fluid">
+            <p>POS System</p>
+        </section>
+        <section class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <ul class="navbar-nav justify-content-end" >
+                <!--li class="nav-item  me-md-2">
+                    <button type="button" class="btn btn-primary"> Alerts  <span class="badge bg-secondary">4</span> </button>
+                </li-->
+                <li class="nav-item me-md-2">
+                    <button type="button" class="btn btn-danger"> Logout </button>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<main>
+    <nav id="sidebar">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-dark"><i class="fas fa-home"></i>  Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a href="customer.html" class="nav-link text-dark"><i class="fas fa-user-cog"></i>  Manage Customer</a>
+            </li>
+            <li class="nav-item">
+                <a href="item.html" class="nav-link text-dark"><i class="fas fa-store"></i>  Manage Store</a>
+            </li>
+            <li class="nav-item">
+                <a href="payment.html" class="nav-link text-dark"><i class="fas fa-cash-register"></i>  Place Order</a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--                <a href="order.html" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i>  Manage Order</a>-->
+<!--            </li>-->
+        </ul>
+    </nav>
+
+
+    /*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    <div class="col-9 grid-margin mainContent">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Manage Customer</h4>
+                <br>
+                <form class="form-sample">
+                    <!--                    <p class="card-description"> Personal info </p>-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row form-group">
+                                <label class="col-sm-3 col-form-label">Search Order</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row form-group">
+                                <div class="col-sm-9">
+                                    <button type="button" class="btn btn-primary"> Search </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-sm-3 col-form-label">Order ID</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-sm-3 col-form-label">Address</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-sm-3 col-form-label">Customer Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-sm-3 col-form-label">Customer Salary</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <div class="col-sm-9">
+                                    <button type="button" class="btn btn-primary"> Update </button>
+                                    <button type="button" class="btn btn-primary"> Delete </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Salary</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>C0001</td>
+                                <td>Amal</td>
+                                <td>Galle</td>
+                                <td>50000</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/style/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+
+</script>
+
+</body>
+</html>

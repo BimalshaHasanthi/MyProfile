@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que</title>
+
+    <style>
+        body{
+            background: #5c636a;
+        }
+        body>header>p{
+            font-size: 50px;
+            position: absolute;
+            left: 35%;
+            top: 5%;
+            color: white;
+        }
+        body>main{
+            /*border: 2px solid red;*/
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            width: 50%;
+            height: 300px;
+            top: 200px;
+            left: 25%;
+        }
+        body>main>section{
+            /*border: 2px solid blue;*/
+            position: relative;
+            display: inline-flex;
+            height: 33%;
+        }
+        body>main>section>div{
+            /*border: 2px solid yellow;*/
+            position: relative;
+            display: inline-flex;
+            height: 100%;
+        }
+
+        .box{
+            height: calc(100% - 50px);
+            width: calc(100% - 20px);
+            z-index: 10;
+            border-radius: 5%;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 25px;
+        }
+
+        #box1{
+            background: red;
+        }
+        #box2{
+            background: green;
+        }
+        #box3{
+            background: blue;
+        }
+        #box4{
+            background: yellow;
+        }
+        #box5{
+            background: pink;
+        }
+        #box6{
+            background: purple;
+        }
+
+        .row{
+            border-bottom: 2px solid white;
+        }
+
+        #section1{
+            flex-grow: 1;
+        }
+        #section2{
+            position: relative;
+            display: inline-flex;
+            flex-grow: 8;
+        }
+        #section3{
+            flex-grow: 1;
+        }
+        .oneSideSpace{
+            flex-grow: 6;
+        }
+        .doubleSideSpace{
+            flex-grow: 3;
+        }
+
+        .btnControl{
+            position: absolute;
+            top: 70%;
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+        }
+
+        #btnStart{
+            background: white;
+            left: 40%;
+        }
+        #btnStop{
+            background: white;
+            left: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <p>Java Script Queue</p>
+</header>
+<main>
+    <section class="row">
+        <div id="section1">
+            <section class="box" id="box1"></section>
+        </div>
+        <div class="oneSideSpace"></div>
+    </section>
+    <section class="row">
+        <div class="doubleSideSpace"></div>
+        <div id="section2">
+            <section class="box" id="box2" ></section>
+            <section class="box" id="box3"></section>
+            <section class="box" id="box4"></section>
+            <section class="box" id="box5"></section>
+        </div>
+        <div class="doubleSideSpace"></div>
+    </section>
+    <section>
+        <div class="oneSideSpace"></div>
+        <div id="section3">
+            <section></section>
+            <section class="box" id="box6"></section>
+        </div>
+    </section>
+</main>
+<section>
+    <button id="btnStart" class="btnControl">START</button>
+    <button id="btnStop" class="btnControl">STOP</button>
+</section>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+    var colors=["red","green","blue","yellow","pink","purple"];
+    var boxes=["#box1","#box2","#box3","#box4","#box5","#box6"]
+    var indexes=[0,1,2,3,4,5];
+    let index=0;
+
+    let timerId;
+
+    function changeColor(){
+
+        for(var i=0; i<6;i++){
+            $(boxes[i]).css('background',colors[indexes[i]]);
+        }
+
+        // console.log(colors[indexes[0]],colors[indexes[1]],colors[indexes[2]],colors[indexes[3]],colors[indexes[4]],colors[indexes[5]])
+
+        var lastColor=colors[5];
+
+        for (var i=4;i>=0;i--){
+            colors[i+1]=colors[i];
+        }
+        colors[0]=lastColor;
+    }
+
+    $("#btnStart").click(function () {
+        clearInterval(timerId);
+        timerId=setInterval(changeColor,1000);
+    });
+
+    $("#btnStop").click(function () {
+        clearInterval(timerId);
+    });
+
+
+</script>
+</body>
+</html>

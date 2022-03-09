@@ -12,46 +12,33 @@
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        .verticle-nav{
+        header>nav>section>p{
+            font-size: 30px;
+            margin: 10px;
+            margin-left: 20px;
+            font-family: "Montserrat ExtraBold";
+        }
+        #navBar{
+            background: #31B97B !important;
+            height: 80px;
+            /*box-shadow: 3px 3px 10px #2c3034;*/
+        }
+        #sidebar{
             background: #31B97B !important;
             min-width: 100px;
-            width: 17rem;
+            width: 275px;
             height: 100vh;
             position: fixed;
             left: 0;
-            box-shadow: 3px 3px 10px #2c3034;
+            top:80px;
+            /*box-shadow: 3px 3px 10px #2c3034;*/
             transition: all 0.4s;
-        }
-        #barcolor{
-            background: #31B97B !important;
-        }
-        body{
-            margin-top: 11.5vh;
-        }
-        .page-content{
-            background: white;
-            width: calc(100% - 17rem);
-            height: 100%;
-            margin-left: 17rem;
-            transition: all 0.4s;
-        }
-        #sidebar.active{
-            margin-top: 100vh;
-            margin-left: -17rem;
-        }
-        #content.active{
-            width: 100%;
-            margin: 0;
-        }
-        .separator{
-            margin: 3rem 0;
-            border-bottom: 1px dashed #b02a37;
-        }
-        .text-uppercase{
-            letter-spacing: 0.1em;
-        }
-        .text-gray{
-            color: #2c3034;
+         }
+        main>nav>ul>li{
+            font-size: 23px;
+            margin-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         .nav-link{
             text-transform: capitalize;
@@ -59,40 +46,27 @@
         .nav-link:hover{
             background: white;
         }
-        .text-primary{
-            color: #0c4128 !important;
-        }
-        img{
-            width: 20vh;
-            height: 8vh;
-            margin-left: 2vw;
-        }
 
-        @media (max-width: 768px) {
-            #sidebar{
-                margin-left: -17rem;
-            }
-            #sidebar.active{
-                margin-left: 0;
-            }
-            .page-content{
-                width: 100%;
-                margin-left: 0;
-                height: 100%;
-            }
-            #content.active{
-                margin-left: 17rem;
-                width: calc(100% - 17rem);
-            }
-        }
+        /*------------------------------------------------------------------------*/
 
+        .mainContent{
+            position: absolute;
+            left: 300px;
+            top: 100px;
+            right: 50px;
+        }
     </style>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand navbar-light fixed-top" id="barcolor">
+    <nav id="navBar" class="navbar navbar-expand navbar-light fixed-top" >
+<!--        <div class="container-fluid">-->
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--        </div>-->
         <section class="container-fluid">
-            <a class="navbar-brand" href=""><img src="assets/images/logo.png"></a>
+            <p>POS System</p>
         </section>
         <section class="d-grid gap-2 d-md-flex justify-content-md-end">
             <ul class="navbar-nav justify-content-end" >
@@ -107,151 +81,37 @@
     </nav>
 </header>
 <main>
-    <nav class="verticle-nav bg-light" id="sidebar">
+    <nav id="sidebar">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
                 <a href="index.html" class="nav-link text-dark"><i class="fas fa-home"></i>  Dashboard</a>
             </li>
             <li class="nav-item">
-                <a href="manageCustomer.html" class="nav-link text-dark"><i class="fas fa-user-cog"></i>  Manage Customer</a>
+                <a href="customer.html" class="nav-link text-dark"><i class="fas fa-user-cog"></i>  Manage Customer</a>
             </li>
             <li class="nav-item">
-                <a href="manageStore.html" class="nav-link text-dark"><i class="fas fa-store"></i>  Manage Store</a>
+                <a href="item.html" class="nav-link text-dark"><i class="fas fa-store"></i>  Manage Store</a>
             </li>
             <li class="nav-item">
-                <a href="placeOrder.html" class="nav-link text-dark"><i class="fas fa-cash-register"></i>  Place Order</a>
+                <a href="payment.html" class="nav-link text-dark"><i class="fas fa-cash-register"></i>  Place Order</a>
             </li>
-            <li class="nav-item">
-                <a href="manageOrder.html" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i>  Manage Order</a>
-            </li>
+<!--            <li class="nav-item">-->
+<!--                <a href="order.html" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i>  Manage Order</a>-->
+<!--            </li>-->
         </ul>
     </nav>
 
-    <section class="page-content p-5" id="content">
-
-        <!--button id="sidebarnav" type="button" class="btn btn-primary bg-white rounded-pill shadow-sm px-2 mb-2">
-            <i class="fa-bars mr-2"></i>
-            <small class="text-uppercase font-weight-bold">Navigation Bar</small>
-        </button-->
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi consequatur distinctio, dolorum error explicabo fuga inventore iste, labore laborum maxime molestiae mollitia neque nulla odio suscipit, ut vero voluptatum.</p>
+    <section class="mainContent">
+        <div class="row"><div class="col-md-4 stretch-card grid-margin"><div class="card bg-gradient-danger card-img-holder text-white"><div class="card-body"><img src="/purple-react/static/media/circle.953c9ca0.svg" class="card-img-absolute" alt="circle"><h4 class="font-weight-normal mb-3">Weekly Sales <i class="mdi mdi-chart-line mdi-24px float-right"></i></h4><h2 class="mb-5">$ 15,0000</h2><h6 class="card-text">Increased by 60%</h6></div></div></div><div class="col-md-4 stretch-card grid-margin"><div class="card bg-gradient-info card-img-holder text-white"><div class="card-body"><img src="/purple-react/static/media/circle.953c9ca0.svg" class="card-img-absolute" alt="circle"><h4 class="font-weight-normal mb-3">Weekly Orders <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i></h4><h2 class="mb-5">45,6334</h2><h6 class="card-text">Decreased by 10%</h6></div></div></div><div class="col-md-4 stretch-card grid-margin"><div class="card bg-gradient-success card-img-holder text-white"><div class="card-body"><img src="/purple-react/static/media/circle.953c9ca0.svg" class="card-img-absolute" alt="circle"><h4 class="font-weight-normal mb-3">Visitors Online <i class="mdi mdi-diamond mdi-24px float-right"></i></h4><h2 class="mb-5">95,5741</h2><h6 class="card-text">Increased by 5%</h6></div></div></div></div>
     </section>
 </main>
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/style/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+
+</script>
 </body>
 </html>
 
