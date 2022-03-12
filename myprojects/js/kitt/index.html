@@ -43,7 +43,7 @@
             width: calc(100% - 20px);
             z-index: 10;
             border-radius: 5%;
-            background: red;
+            background: white;
             margin-left: 10px;
             margin-right: 10px;
             margin-top: 25px;
@@ -100,13 +100,13 @@
 <main>
     <section class="row">
         <div id="section1">
-            <section class="box" id="box1"></section>
-            <section class="box" id="box2"></section>
-            <section class="box" id="box3"></section>
-            <section class="box" id="box4"></section>
-            <section class="box" id="box5"></section>
-            <section class="box" id="box6"></section>
-            <section class="box" id="box7"></section>
+            <section class="box" id="b1"></section>
+            <section class="box" id="b2"></section>
+            <section class="box" id="b3"></section>
+            <section class="box" id="b4"></section>
+            <section class="box" id="b5"></section>
+            <section class="box" id="b6"></section>
+            <section class="box" id="b7"></section>
         </div>
     </section>
 </main>
@@ -118,7 +118,35 @@
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
 
+    var blocks=["#b1","#b2","#b3","#b4","#b5","#b6","#b7"];
 
+    let timerID;
+    $("#btnStart").on('click',function(){
+        clearInterval(timerID);
+        timerID=setInterval(changeColour, 100);
+    });
+
+    $("#btnStop").on('click',function(){
+        clearInterval(timerID);
+    });
+
+
+    let round=0;
+    let index=4
+    function changeColour(){
+        for(var i=0; i<7; i++){
+            $(blocks[i]).css('background',"white");
+        }
+        $(blocks[index]).css('background',"red");
+        if(round%2==0){
+            index++;
+        }else{
+            index--;
+        }
+        if(index==6 | index==0){
+            round++;
+        }
+    }
 
 </script>
 </body>
