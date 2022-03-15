@@ -3,6 +3,12 @@ const itemNameRegEx = /^[A-z ]{5,20}$/;
 const itemPriceRegEx = /^[1-9][0-9]{1,5}(.)[0-9]{2}$/;
 const itemQtyRegEx = /^[0-9][0-9]*$/;
 
+
+$("#btnAddItem").attr('disabled', true);
+$("#btnUpdateItem").attr('disabled', true);
+$("#btnDeleteItem").attr('disabled', true);
+
+
 function addItem() {
     let itemCode = $("#txtItemCode").val();
     let itemName = $("#txtItemName").val();
@@ -41,6 +47,9 @@ function addItem() {
         validateItemName();
         validateItemPrice();
         validateItemQty();
+
+        setItemButtons();
+
 
     });
 
@@ -215,6 +224,8 @@ $("#btnSearchItem").click(function () {
 
 
 $("#txtSearchItemId").keyup(function (event) {
+    setItemButtons();
+
     if (itemCodeRegEx.test($("#txtSearchItemId").val())) {
         $("#txtSearchItemId").css('border','3px solid green');
     }else{
@@ -222,6 +233,8 @@ $("#txtSearchItemId").keyup(function (event) {
     }
 });
 $("#txtItemCode").keyup(function (event) {
+
+    setItemButtons();
 
     if (itemCodeRegEx.test($("#txtItemCode").val())) {
         $("#txtItemCode").css('border','3px solid green');
@@ -234,6 +247,7 @@ $("#txtItemCode").keyup(function (event) {
     }
 });
 $("#txtItemPrice").keyup(function (event) {
+    setItemButtons();
 
     if (itemPriceRegEx.test($("#txtItemPrice").val())) {
         $("#txtItemPrice").css('border','3px solid green');
@@ -246,6 +260,8 @@ $("#txtItemPrice").keyup(function (event) {
     }
 });
 $("#txtItemName").keyup(function (event) {
+    setItemButtons();
+
 
     if (itemNameRegEx.test($("#txtItemName").val())) {
         $("#txtItemName").css('border','3px solid green');
@@ -258,6 +274,8 @@ $("#txtItemName").keyup(function (event) {
     }
 });
 $("#txtItemQty").keyup(function (event) {
+    setItemButtons();
+
 
     if (itemQtyRegEx.test($("#txtItemQty").val())) {
         $("#txtItemQty").css('border','3px solid green');
@@ -314,23 +332,23 @@ function setItemButtons() {
     let b = itemCodeRegEx.test($("#txtItemCode").val()) & itemNameRegEx.test($("#txtItemName").val()) & itemPriceRegEx.test($("#txtItemPrice").val()) & itemQtyRegEx.test($("#txtItemQty").val());
 
     if (a) {
-        $("#btnDeleteCustomer").attr('disabled', false);
-        $("#btnUpdateCustomer").attr('disabled', false);
-        $("#btnAddCustomer").attr('disabled', true);
+        $("#btnDeleteItem").attr('disabled', false);
+        $("#btnUpdateItem").attr('disabled', false);
+        $("#btnAddItem").attr('disabled', true);
     } else {
-        $("#btnDeleteCustomer").attr('disabled', true);
-        $("#btnUpdateCustomer").attr('disabled', true);
-        $("#btnAddCustomer").attr('disabled', false);
+        $("#btnDeleteItem").attr('disabled', true);
+        $("#btnUpdateItem").attr('disabled', true);
+        $("#btnAddItem").attr('disabled', false);
     }
 
     if (b) {
-        $("#btnDeleteCustomer").attr('disabled', false);
-        $("#btnUpdateCustomer").attr('disabled', false);
-        $("#btnAddCustomer").attr('disabled', false);
+        $("#btnDeleteItem").attr('disabled', false);
+        $("#btnUpdateItem").attr('disabled', false);
+        $("#btnAddItem").attr('disabled', false);
     } else {
-        $("#btnDeleteCustomer").attr('disabled', true);
-        $("#btnUpdateCustomer").attr('disabled', true);
-        $("#btnAddCustomer").attr('disabled', true);
+        $("#btnDeleteItem").attr('disabled', true);
+        $("#btnUpdateItem").attr('disabled', true);
+        $("#btnAddItem").attr('disabled', true);
     }
 }
 
