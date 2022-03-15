@@ -137,7 +137,10 @@
         for(var i=0; i<7; i++){
             $(blocks[i]).css('background',"white");
         }
+        $(blocks[index-1]).css('background',"pink");
         $(blocks[index]).css('background',"red");
+        $(blocks[index+1]).css('background',"pink");
+
         if(round%2==0){
             index++;
         }else{
