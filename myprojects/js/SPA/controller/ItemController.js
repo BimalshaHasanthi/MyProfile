@@ -326,7 +326,6 @@ function loadItemIds() {
     }
 }
 
-
 function setItemButtons() {
     let a = isItemExists($("#txtItemCode").val());
     let b = itemCodeRegEx.test($("#txtItemCode").val()) & itemNameRegEx.test($("#txtItemName").val()) & itemPriceRegEx.test($("#txtItemPrice").val()) & itemQtyRegEx.test($("#txtItemQty").val());
@@ -351,7 +350,6 @@ function setItemButtons() {
         $("#btnAddItem").attr('disabled', true);
     }
 }
-
 
 function isItemExists(id){
     for(var i in itemArray){
