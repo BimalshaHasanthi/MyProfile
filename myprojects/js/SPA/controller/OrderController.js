@@ -5,23 +5,20 @@ const quantityRegEx = /^[1-9][0-9]*$/;
 
 
 $("#txtOrderId").val("O00-0001");
-//
-//
-//
-//
-// $("#btnAddToCart").attr('disabled', true);
-// $("#btnPurchaseOrder").attr('disabled', true);
-//
-// $("#txtOrderId").prop('disabled', true);
-// $("#txtDate").prop('disabled', true);
-// $("#txtTime").prop('disabled', true);
-// $("#txtOrderCustName").prop('disabled', true);
-// $("#txtOrderCustAddress").prop('disabled', true);
-// $("#txtOrderCustContact").prop('disabled', true);
-// $("#txtOrderItemName").prop('disabled', true);
-// $("#txtOrderItemPrice").prop('disabled', true);
-// $("#txtOrderItemQty").prop('disabled', true);
-// $("#txtSubTotal").prop('disabled', true);
+
+$("#btnAddToCart").attr('disabled', true);
+$("#btnPurchaseOrder").attr('disabled', true);
+
+$("#txtOrderId").prop('disabled', true);
+$("#txtDate").prop('disabled', true);
+$("#txtTime").prop('disabled', true);
+$("#txtOrderCustName").prop('disabled', true);
+$("#txtOrderCustAddress").prop('disabled', true);
+$("#txtOrderCustContact").prop('disabled', true);
+$("#txtOrderItemName").prop('disabled', true);
+$("#txtOrderItemPrice").prop('disabled', true);
+$("#txtOrderItemQty").prop('disabled', true);
+$("#txtSubTotal").prop('disabled', true);
 
 
 function displayDateTime() {
@@ -98,23 +95,23 @@ $('#cmbOrderItemCode').on('change', function() {
     }
 });
 
-// function setOrderButtons() {
-//     let a = orderItemCodeRegEx.test($("#cmbOrderItemCode").val()) & orderCusIDRegEx.test($("#cmbOrderCustId").val()) & quantityRegEx.test($("#txtQuantity").val()) & parseInt($("#txtQuantity").val())<=parseInt($("#txtOrderItemQty").val());
-//     let b = orderIDRegEx.test($("#txtOrderId").val()) & cartArray.length>0;
-//     if (a) {
-//         $("#btnAddToCart").attr('disabled', false);
-//     } else {
-//         $("#btnAddToCart").attr('disabled', true);
-//     }
-//     if (b) {
-//         $("#btnPurchaseOrder").attr('disabled', false);
-//     } else {
-//         $("#btnPurchaseOrder").attr('disabled', true);
-//     }
-// }
+function setOrderButtons() {
+    let a = orderItemCodeRegEx.test($("#cmbOrderItemCode").val()) & orderCusIDRegEx.test($("#cmbOrderCustId").val()) & quantityRegEx.test($("#txtQuantity").val()) & parseInt($("#txtQuantity").val())<=parseInt($("#txtOrderItemQty").val());
+    let b = orderIDRegEx.test($("#txtOrderId").val()) & cartArray.length>0;
+    if (a) {
+        $("#btnAddToCart").attr('disabled', false);
+    } else {
+        $("#btnAddToCart").attr('disabled', true);
+    }
+    if (b) {
+        $("#btnPurchaseOrder").attr('disabled', false);
+    } else {
+        $("#btnPurchaseOrder").attr('disabled', true);
+    }
+}
 
 $("#txtQuantity").keyup(function (event) {
-    // setOrderButtons();
+    setOrderButtons();
     if($("#txtQuantity").val()===""){
         $("#txtQuantity").css('border','1px solid #ced4da');
         $("#txtSubTotal").val("");
@@ -157,7 +154,7 @@ $('#btnAddToCart').click(function () {
     setQtyOnHand();
     //clearAllCustomerFields();
     loadAllCartObjects();
-    // setOrderButtons();
+    setOrderButtons();
     //setCustomerButtons();
 });
 
@@ -189,7 +186,7 @@ $('#btnPurchaseOrder').click(function () {
     setTotalPurchase();
     clearAllOrderFields();
     loadAllCartObjects();
-    // setOrderButtons();
+    setOrderButtons();
 });
 
 function reducePurchasedItems() {

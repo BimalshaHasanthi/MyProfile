@@ -1,7 +1,13 @@
-const customerIdRegEx = /^(C0)[0-9]{3,4}$/;
+const customerIdRegEx = /^(C00-)[0-9]{3,4}$/;
 const customerNameRegEx = /^[A-z ]{2,20}$/;
 const customerAddressRegEx = /^[A-z0-9/,. ]*$/;
 const customerSalaryRegEx = /^[0-9]*(.)[0-9]{2}$/;
+
+
+$("#btnAddCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+
 
 function addCustomer() {
     let customerId = $("#txtCustomerId").val();
@@ -43,8 +49,13 @@ function addCustomer() {
         validateCustomerAddress();
         validateCustomerSalary();
 
+        setCustomerButtons();
+
+
     });
     loadCustomerIds();
+    setCustomerButtons();
+
 }
 
 function ifCustomerExists(id){
@@ -75,6 +86,7 @@ function updateCustomer() {
     clearAllCustomerFields();
 
 
+
     $("#customerTbl>tr").click(function () {
         let customerId = $(this).children(":eq(0)").text();
         let customerName = $(this).children(":eq(1)").text();
@@ -92,9 +104,13 @@ function updateCustomer() {
         validateCustomerName();
         validateCustomerAddress();
         validateCustomerSalary();
+        setCustomerButtons();
+
 
     });
     loadCustomerIds();
+    setCustomerButtons();
+
 
 
 
@@ -118,6 +134,8 @@ function searchCustomer() {
     }
     loadAllCustomers();
     clearSearchCustomerFields();
+    setCustomerButtons();
+
 
 }
 
@@ -130,6 +148,8 @@ function deleteCustomer() {
 
     clearAllCustomerFields();
     loadAllCustomers();
+    setCustomerButtons();
+
 
     $("#customerTbl>tr").click(function () {
         let customerId = $(this).children(":eq(0)").text();
@@ -148,9 +168,12 @@ function deleteCustomer() {
         validateCustomerName();
         validateCustomerAddress();
         validateCustomerSalary();
+        setCustomerButtons();
+
     });
 
     loadCustomerIds();
+    setCustomerButtons();
 
 }
 
@@ -213,6 +236,8 @@ $("#txtSearchCustomerId").keyup(function (event) {
     }
 });
 $("#txtCustomerId").keyup(function (event) {
+    setCustomerButtons();
+
     if (customerIdRegEx.test($("#txtCustomerId").val())) {
         $("#txtCustomerId").css('border','3px solid green');
     }else{
@@ -224,6 +249,8 @@ $("#txtCustomerId").keyup(function (event) {
     }
 });
 $("#txtCustomerName").keyup(function (event) {
+    setCustomerButtons();
+
     if (customerNameRegEx.test($("#txtCustomerName").val())) {
         $("#txtCustomerName").css('border','3px solid green');
     }else{
@@ -235,6 +262,8 @@ $("#txtCustomerName").keyup(function (event) {
     }
 });
 $("#txtCustomerAddress").keyup(function (event) {
+    setCustomerButtons();
+
     if (customerAddressRegEx.test($("#txtCustomerAddress").val())) {
         $("#txtCustomerAddress").css('border','3px solid green');
     }else{
@@ -246,6 +275,8 @@ $("#txtCustomerAddress").keyup(function (event) {
     }
 });
 $("#txtCustomerSalary").keyup(function (event) {
+    setCustomerButtons();
+
     if (customerSalaryRegEx.test($("#txtCustomerSalary").val())) {
         $("#txtCustomerSalary").css('border','3px solid green');
     }else{
@@ -294,6 +325,44 @@ function loadCustomerIds() {
         $('#cmbOrderCustId').append(new Option(id, id));
     }
 }
+
+
+
+function setCustomerButtons() {
+    let a = isCustomerExists($("#txtCustomerId").val());
+    let b = customerIdRegEx.test($("#txtCustomerId").val()) & customerNameRegEx.test($("#txtCustomerName").val()) & customerAddressRegEx.test($("#txtCustomerAddress").val()) & customerSalaryRegEx.test($("#txtCustomerSalary").val());
+
+    if (a) {
+        $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnAddCustomer").attr('disabled', true);
+    } else {
+        $("#btnDeleteCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', true);
+        $("#btnAddCustomer").attr('disabled', false);
+    }
+
+    if (b) {
+        $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnAddCustomer").attr('disabled', false);
+    } else {
+        $("#btnDeleteCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', true);
+        $("#btnAddCustomer").attr('disabled', true);
+    }
+}
+
+
+function isCustomerExists(id){
+    for(var i in customerArray){
+        if(customerArray[i].getId()===id){
+            return true;
+        }
+    }
+    return false;
+}
+
 
 
 

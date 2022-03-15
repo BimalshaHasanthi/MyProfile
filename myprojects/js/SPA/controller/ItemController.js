@@ -1,4 +1,4 @@
-const itemCodeRegEx = /^(I0)[0-9]{3,4}$/;
+const itemCodeRegEx = /^(I00-)[0-9]{3,4}$/;
 const itemNameRegEx = /^[A-z ]{5,20}$/;
 const itemPriceRegEx = /^[1-9][0-9]{1,5}(.)[0-9]{2}$/;
 const itemQtyRegEx = /^[0-9][0-9]*$/;
@@ -45,7 +45,7 @@ function addItem() {
     });
 
     loadItemIds();
-
+    setItemButtons();
 
 }
 
@@ -92,9 +92,13 @@ function updateItem() {
         validateItemName();
         validateItemPrice();
         validateItemQty();
+        setItemButtons();
+
     });
 
     loadItemIds();
+    setItemButtons();
+
 
 }
 
@@ -116,6 +120,8 @@ function searchItem() {
     }
     loadAllItems();
     clearSearchItemFields();
+    setItemButtons();
+
 }
 
 
@@ -128,6 +134,8 @@ function deleteItem() {
 
     loadAllItems();
     clearAllItemFields();
+    setItemButtons();
+
 
     $("#itemTbl>tr").click(function () {
         let itemId = $(this).children(":eq(0)").text();
@@ -146,9 +154,13 @@ function deleteItem() {
         validateItemName();
         validateItemPrice();
         validateItemQty();
+        setItemButtons();
+
     });
 
     loadItemIds();
+    setItemButtons();
+
 
 }
 
@@ -296,6 +308,41 @@ function loadItemIds() {
     }
 }
 
+
+function setItemButtons() {
+    let a = isItemExists($("#txtItemCode").val());
+    let b = itemCodeRegEx.test($("#txtItemCode").val()) & itemNameRegEx.test($("#txtItemName").val()) & itemPriceRegEx.test($("#txtItemPrice").val()) & itemQtyRegEx.test($("#txtItemQty").val());
+
+    if (a) {
+        $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnAddCustomer").attr('disabled', true);
+    } else {
+        $("#btnDeleteCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', true);
+        $("#btnAddCustomer").attr('disabled', false);
+    }
+
+    if (b) {
+        $("#btnDeleteCustomer").attr('disabled', false);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnAddCustomer").attr('disabled', false);
+    } else {
+        $("#btnDeleteCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', true);
+        $("#btnAddCustomer").attr('disabled', true);
+    }
+}
+
+
+function isItemExists(id){
+    for(var i in itemArray){
+        if(itemArray[i].getCode()===id){
+            return true;
+        }
+    }
+    return false;
+}
 
 
 
